@@ -1,0 +1,684 @@
+:root {
+    --color-principal: #;
+    --fuente-principal: 'Roboto', cursive;
+}
+
+html {
+    
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales -------------------------------------------------------------------------------------------------------------GLOBALES*/
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    /* width: min(90%, 120rem); Otra forma de hacer el contenedor con minimo y maximo de contenido  */
+    margin: 0 auto;
+    justify-content: center;
+}
+
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 5rem auto;
+    gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size:4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #134E5E;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+form{
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Utilidades Para utilizar, eso son las clases, SE VUELVEN A UTILIZAR, no como las ID*/
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.titulo {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+/* Barra de BUSQUEDA --------------------------------------------------------------------- Barra BUSQUEDA */
+
+.topnav {
+    width: 100%;
+    height: 22rem;
+     background: linear-gradient(to right, #71B280, #134E5E); 
+     margin: 0 auto;
+}
+
+.img--nav {
+    width: 20px;
+    margin: 0 auto;
+}
+
+.img--nav--logo {
+    max-width: 150px;
+    margin-left: 11rem;
+}
+
+.topnav__contenedor {
+    margin: 0 auto;
+}
+
+.compras {
+    max-width: 50px;
+    margin-left: 155px;
+    margin-top: 10px;
+}
+
+.contenedor__buscador {
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 6rem;
+}
+.contenav{
+    padding-left: 11rem ;
+ }
+
+@media (min-width: 768px) {
+    .topnav {
+        height: 10rem;
+    }
+    .topnav__contenedor {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        
+    }
+
+    .compras {
+        grid-column: 4 / 5;
+        max-width: 50px;
+        margin-left: 0rem;
+        margin-top: 0;
+    }
+    .img--nav--logo {
+        margin-left: 11rem;
+    }
+
+    .contenedor__buscador {
+        align-items: center;
+        padding-left: 0rem;
+    }
+    .contenav{
+        padding-left: 0rem ;
+     }
+    
+}
+
+
+
+.buscador {
+    width: 240px;
+    height: 40px;
+    border-radius: 2rem;
+    text-decoration: none;
+}
+
+
+/* Nav Inferior -------------------------------------------------------------- Nav Inferior */
+
+.nav {
+    background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   /* background-color: rgb(9, 136, 41)*/;
+    height: 20rem;
+    text-align: center;
+}
+
+.nav__contenedor {
+    padding-top:2rem;
+}
+
+.nav__link {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .nav__contenedor {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav {
+        height: 6rem;
+    }
+}
+/*------------------- ESTILOS INDEX--------------------------------*/
+.BannerDescripcion{ /*background size, cover, no repeat fixed*/
+    background-image: url(/Imagenes/wachin\ 3.jpg);
+    height: 78rem;
+    background-position: center;
+}
+
+
+
+.imagenFondoIndex{
+    width: 70%;
+}
+.tituloBanner{
+    font-size: 6rem;
+}
+
+.titulitoBanner{
+    margin-top: 5rem;
+    margin-bottom: 0%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:left;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+.parrafitoBanner{
+    color: white;
+    font-size: 2rem;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+}
+
+.boton1{
+    color: white;
+    background:  #134E5E;
+    /*background-color: rgb(9, 136, 41);*/
+    padding: 1.5rem 2.5rem;
+    border-radius: 2rem; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contenidoBanner{
+    padding-top: 15rem;
+}
+
+.textoBanner{
+    
+    width: fit-content;
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto 15%;
+    border-radius: 2.5rem;
+    padding: 2rem 2.5rem;
+    
+}
+.parrafitoBanner2{
+    color: #134E5E;
+    font-size: 2rem;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+
+}
+.tituloBanner2{
+        margin-top: 0;
+        margin-bottom: 0%;
+        color: #134E5E;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align:left;
+        font-family: 'Roboto', sans-serif; 
+}
+.parrafoCuerpos{
+    background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    padding: 2.5rem 0rem;
+    
+}
+.cuerpo {
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 2.5rem;
+
+    
+}
+.cuerpo:hover{
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+.icon{
+    width: 100px;
+    margin: 0 0rem ;
+   }
+   .seleccion{
+    width: 100px;
+    padding-bottom: 2rem;
+}
+.carga{
+    width: 90px;
+    padding-bottom: 1.5rem;
+}
+.comienza{
+    width: 95px;
+    padding-bottom: 4rem;
+    
+}
+.registro{
+    width: 110px;
+    padding-bottom: 5rem;
+    padding-left: 1.5rem;
+
+}
+.botonPrueba{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    
+
+}
+.contenedorReseñas{
+    background-color: white; 
+    padding: 2rem;
+     border-radius: 2rem; 
+     box-shadow: 1px 1px 10px black;
+     font-family: 'Roboto', sans-serif;
+     margin: 2rem 0rem;
+     height: 30rem;
+    }
+
+    .personas {
+        display: block;
+        size: auto;
+        padding: 2rem;
+    }
+
+
+@media (max-width: 768px) {
+    .section {
+        display: inline-block;
+    }
+
+
+    .cuerpo {
+        margin: 4rem auto;
+    }
+
+    .cuerpos {
+        margin: 0 10rem;
+    }
+
+    .videollamadas {
+        margin: 4rem auto;
+    }
+
+    .personas {
+        width: 300px;
+        
+    }
+
+    .tituloBanner {
+        font-size: 3.6rem;
+        
+    }
+
+    .parrafitoBanner {
+        text-align: left;
+    }
+
+    .comoFuncionah2{
+        text-align: center;
+    }
+
+    .parrafitoBanner, .parrafitoBanner2 {
+        font-size: 2.6rem;
+    }
+
+    .nav__link {
+        font-size: 2.5rem;
+        font-family: 'Roboto', sans-serif;
+        margin: 1rem 0rem;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .boton1 {
+        font-size: 1.5rem;
+        font-family: 'Roboto';
+        
+        
+    }
+    .icon {
+        margin: 0 14.5rem;
+    }
+    
+    .contenedorReseñas{
+        margin-left: 25px;
+    }
+    
+}
+
+.comoFuncionah2{
+    color:#134E5E ;
+    font-size: 6rem;
+    margin-top: 2.5rem;
+}
+.parrafitoPasos{
+        color: #134E5E;
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+}
+.videollamadasTitulo{
+    color:#134E5E ;
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    
+}
+
+.subtitle{
+    margin: 2rem 0rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+.left{
+    text-align: left;
+}
+.tituloSeccion {
+    
+    color: white !important;
+    font-size: 4rem;
+}
+/*-------------------------------REGISTRO------------------------------------*/
+
+
+.fondoRegistro{
+    background-image: url(/Imagenes/Vieja\ focuseada.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 120rem;
+
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+input{
+    width: 100%;
+    margin-top: 1rem;
+}
+form{
+    width: 100%;
+
+}
+.form{
+    background-color: white;
+    width: 30%;
+    height: 88%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5px black;
+    padding: 5rem;
+}   
+.flex2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    margin: 1rem 0rem;
+    grid-column: start;
+
+}
+.inputeano{
+    grid-column: 1/2;
+    margin: 1rem auto;
+}
+.leivel{
+    grid-column: 2/4;
+}
+.carga2{
+    width: 100%;
+    margin: 0 auto;
+}
+.opcion2{
+    padding: 1rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: .3s;
+    border-radius: 2rem;
+    border: 1px solid gray;
+    margin: 1.5rem 0rem;
+}
+.opcion2::hover{
+    border: 2px solid green;
+}
+
+label{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1rem;
+    margin: 1rem 0rem;
+    font-size: 1.5rem;
+}
+.tituloRegistro{
+    color:#134E5E ;
+    font-size: 5rem;
+    margin: 0rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.upload{
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+
+}
+.botonEnviar{
+    width: 150px!important;
+    font-size: 1.5rem;
+    
+    
+}
+.contacto__boton{
+    margin: 0 auto;
+    padding-left: 15rem;
+
+     
+}
+.modal-contenido{
+    background: linear-gradient(to right, #71B280, #134E5E);
+
+    width:60rem;
+    height: 40%;
+    padding: 20px 20px;
+    margin: 14% auto;
+    position: relative;
+    border-radius: 1rem;
+  }
+  .modal{
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+  }
+  #miModal:target{
+    opacity:1;
+    pointer-events:auto;
+  } 
+
+  .parrafitoBanner22{
+    color: white;
+    font-size: 2rem;
+    text-align: justify;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.tituloRegistro22{
+    color:white;
+    font-size: 5rem;
+    margin: 0rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.imagenADV{
+    
+    border-radius: 2rem;
+}
+
+
+    
+
+
+
+
+
+/* Footer --------------------------------------------------------------------------------------------------------- Footer */
+
+.footer {
+    background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 80rem;
+    padding-top: 0rem;
+}
+.politicas{
+    padding-top: 7rem;
+    margin-left: 0rem;
+    padding-left: 11.5rem ;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 30rem;
+
+    }
+    .iconitos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /*gap*/
+          
+    }
+    .img--nav--logo{
+        padding-left: 0rem;
+        padding-bottom: 1.5rem;
+    }
+    .politicas{
+        text-align: center;
+    }
+    
+}
+
+.titulo__footer {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+    
+    font-weight: bold;
+}
+
+.link__footer {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.link__footer:hover {
+    color: #024950;
+}
+
+.footer_foto {
+    max-width: 100px;
+    transition: 0.5s;
+}
+
+.user__img {
+    transition: 0.5s;
+}
+
+.instagram__img:hover {
+    transform:rotate(360deg);
+}
+
+.user__img:hover {
+    transform:rotate(360deg);
+}
+
+.instagram__img {
+    margin-bottom: 2rem;
+    border-radius: 10rem;
+    transition: 0.5s;
+}
+
+.participantes {
+    
+    border-radius: 5rem;
+    margin: 5rem 6rem; 
+}
+.faqs{
+    padding-top: 7rem;
+    padding-right: 0rem ;
+}
+.img--nav--logo{
+    padding-top: 2.5rem;
+    margin-left: 0rem;
+}
+
+
+.iconardos{
+    width: 40px;
+}
+.futer{
+    text-align: left;
+}
+
+.hide{
+    display: none;
+}

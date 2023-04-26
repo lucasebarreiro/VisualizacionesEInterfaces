@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+ 
+    <script src="js/jquery.min.js"></script>
+    
+    
+   
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
+
+    <title>Registro</title>
+</head>
+<body>
+<!---------------------------------------------------------HEADER-------------------------------------------------->    
+<header id="headerIndex">
+    <div class="topnav">
+        <div class="topnav__contenedor contenedor">
+            <div class="contenav">
+                <a href="/index.html">
+                    <img class="img--nav--logo"  src="/Fotos/Logo.png" alt="">
+                    
+                </a>
+            </div>
+            <div class="contenedor__buscador">
+                <input class="buscador" type="text" placeholder="Buscar">
+                <img class="img--nav"  src="/Fotos/Lupa.png" alt=""> 
+            </div>
+             
+            <a class="compras" href="/giftcard.html">
+            </a>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="nav__contenedor contenedor">
+            <a class="nav__link" href="registro.html">Incripción</a>
+            <a class="nav__link" href="/calendario.html">Calendario</a>
+            <a class="nav__link" href="/contacto.html">Contacto</a>
+            <a class="nav__link" href="/curso.html">Profesionales</a>
+        </div>
+    </div>
+    
+</header> 
+<!---------------------------------------------------------FIN HEADER------------------------------------------------->
+<!---------------------------------------------------------INICIO MAIN-------------------------------------------------->
+    <main>
+       <!-- <h2 class="titulitoBanner comoFuncionah2">Registrarse</h2>-->
+       
+           <div class="fondoRegistro flex">
+           
+
+                <div class="form">
+                    <h2 class="tituloRegistro">Registrarse</h2>
+                    <form id="formRegistro" action="#miModal" class="formulario"  method="get" name="form">
+                        <div class="name__form">
+                            <label class="h3" for="nombre">Nombre de Usuario:</label>
+                            <br>
+                            <input id="nombreRegistro" class="opcion2" type="text" placeholder="Usuario*" name="nombre" required >
+                        </div>
+                        <div class="contraForm">
+                            <label  for="contra">Contraseña:</label>
+                            <br>
+                            <input  class="opcion2" type="password" placeholder="Contraseña*" name="contraseña" >
+
+                        </div>
+                        <div class="contraForm2">
+                            <label for="contra2">Repetir Contraseña:</label>
+                            <br>
+                            <input class="opcion2" type="password" placeholder="Repetir Contraseña*" name="contraseña2" >
+
+                        </div>
+                        <div class="fechaNac">
+                            <label for="nacimiento">Fecha de Nacimiento:</label>
+                            <br>
+                            <input class="opcion2" type="date">
+                        </div>
+                        <div class="mail">
+                            <label class="mailRegistro" for="email">Email:</label>
+                            <br>
+                            <input id="emailRegistro" class="opcion2" type="text" placeholder="Email*" name="email" required >
+                        </div>
+                        <div class="phone">
+                            <label class="telefonoRegistro" for="telefono">Teléfono:</label>
+                            <br>
+                            <input id="telContacto" class="opcion2" type="number"  placeholder="Telefono*" name="telefono" required>
+                        </div>
+                        <div class="checkboxes">
+                            <label for="enfermedades">Seleccione si tiene alguna enfermedad:</label>
+                            <div class="checkb flex2">
+                                <input class="inputeano" type="checkbox"  name="cb1">
+                                <label>Respiratoria</label>
+                                
+                                
+                            </div>
+                            <div class="checkb flex2">
+                                <input class="inputeano" type="checkbox"  name="cb2">
+                                <label>Cardíaca</label>
+                                
+                            </div>
+                            <div class="checkb flex2">
+                                <input class="inputeano" type="checkbox"  name="cb3">
+                                <label>Muscular</label>
+                                
+                            </div>
+                            <div class="checkb flex2">
+                                <input class="inputeano" type="checkbox"  name="cb4">
+                                <label>Osea</label>
+                                
+                            </div>
+                            <div class="checkb flex2">
+                                <input class="inputeano" type="checkbox"  name="cb5">
+                                <label class="leivel">Ninguna</label>
+                                
+                            </div>
+
+                            
+
+                        </div>
+                        <br>
+                        <div class="carga2">
+                            <label>Certificado Médico</label>
+                            <input class="upload" type="file">
+                        </div>
+                    
+                        <div class="contacto__boton">
+                            <a href="#miModal">
+                            <input  class="botonEnviar boton1"  type="button" onclick="play()" class="boton__enviarContacto" id="Enviar" value="Enviar">
+                            </a>
+                        </div>
+                                                <a href="#miModal">aaaa</a>
+                        <div id="miModal" class="modal">
+                        <div class="modal-contenido">
+                            <a class="parrafitoBanner22" href="#">x</a>
+                            <h2 class="tituloRegistro22">¡Advertencia!</h2>
+                            <p class="parrafitoBanner22">No olvide cargar su Certificado Médico haciendo click donde muestra la imagen <br>
+
+                            <audio id="errorSound" >
+                                    <source src="/Imagenes/error.mp3" 
+                                    type="audio/mpeg">
+                            </audio>
+                            <script>
+                                var audio = document.getElementById('errorSound');
+                                function play(){
+                                    audio.play();
+                                    //document.getElementById("miModal").style.opacity = 1;
+                                }
+                            </script>
+                        
+                                <br>
+                                <img class="imagenADV"  src="/Imagenes/CargarArchivo.JPG" alt="">
+                        </div>
+                        </div>
+                        <div id="mensajeContacto" class="error">
+
+                        </div>
+                    </form>
+                </div>
+
+           </div>
+        
+
+      
+
+    </main>
+    <script src="js/codigo.js"></script>
+    <!--------------------------------------------------------- FOOTER-------------------------------------------------------> 
+    <footer class="footer">
+
+        <div class="participantes centrar-texto">
+            <div class="politicas">
+                <a class="nav__link futer">Avisos Legales</a>
+                <a class="nav__link futer">Política de privacidad</a>
+                <a class="nav__link futer">Política de Cookies</a>
+                <a class="nav__link futer">Política de Calidad</a>
+            </div>   
+        </div>
+
+        <div class="participantes centrar-texto">
+            
+            <img class="img--nav--logo"  src="/Fotos/Logo.png" alt="">
+            <div class="iconitos ">
+                <img class="iconardos" src="/Imagenes/feibu.svg" alt="">
+                <img class="iconardos" src="/Imagenes/ig.svg" alt="">
+                <img class="iconardos" src="/Imagenes/tuiders.svg" alt="">
+                <img class="iconardos" src="/Imagenes/zoom.svg" alt="">
+            </div>
+            
+        </div>
+
+        <div class="participantes centrar-texto">
+            <div class="faqs">
+                <h3 class="titulo__footer centrar-texto hide">Redes sociales</h3>
+                
+                <a class="link__footer titulo__descripcion" href="">Sobre nosotros</a>
+                <a class="link__footer titulo__descripcion" href="">Blog</a>
+                <a class="link__footer titulo__descripcion" href="">Contacto</a>
+                <a class="link__footer titulo__descripcion" href="">FAQs</a>
+        </div>
+            
+        </div>
+
+    </footer>
+        <!--POR SI SE AÑADE JS, EL LINK VA ACA ABAJO-->
+        <script src="js/codigo.js"></script>
+    
+    </body>
+    </html>    
